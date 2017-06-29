@@ -1,13 +1,13 @@
 @import "compass";
 @import "compass/css3";
 
-@import "mixin/_breakpoint";
+@import "mixin/breakpoint";
 
-@import 'base/_var';
-@import 'base/_reset';
-@import 'base/_base';
+@import 'base/var';
+@import 'base/reset';
+@import 'base/base';
 
-@import "vendor/_bxslider";
-@import "vendor/_lightslider";
+@import "vendor/bxslider";
+@import "vendor/lightslider";
 
 @import "main";

@@ -1,152 +1,102 @@
-.square {
-    border: 1px solid orange;
-    position: relative;
+header {
+    > .wr {
+        background: $grey-1_2;
+        border-radius: 0 0 15px 15px;
+        border-bottom: 3px solid silver;
+        border-left: 1px solid silver;
+        border-right: 1px solid silver;
+        padding: 20px;
+    }
 
-    .block {
-        border: 1px solid pink;
-        position: absolute;
-
-        &.-big {
-            width: 50%;
-            height: 50%;
+    .logo {
+        & {
+            width: 150px;
+            display: block;
+            text-align: center;
+            text-shadow: 1px 1px 10px $grey-6_2;
+            margin-left: 50%;
+            margin-bottom: 30px;
+            transform: translate(-50%);
         }
 
-        &.-small {
-            width: 25%;
-            height: 25%;
-        }
+        &, b {
+            color: $grey-6_2;
+            text-decoration: none;
+            font-size: 40px;
+            font-weight: 400;
 
-        &.-vertical {
-            width: 25%;
-            height: 50%;
-            background-color: grey;
-        }
-
-        &.-horizontal {
-            width: 50%;
-            height: 25%;
-            background-color: #806974;
-        }
-
-        &:nth-child(odd) {
-            background-color: #eee;
-        }
-
-        &:nth-child(even) {
-            background-color: #ccc;
-        }
-
-        &:nth-child(2), &:nth-child(4), &:nth-child(8), &:nth-child(9) {
-            left: 50%;
-        }
-
-        &:nth-child(3), &:nth-child(5) {
-            left: 75%;
-        }
-
-        &:nth-child(4), &:nth-child(5) {
-            top: 25%;
-        }
-
-        &:nth-child(6), &:nth-child(7), &:nth-child(8) {
-            top: 50%;
-        }
-
-        &:nth-child(7) {
-            left: 25%;
-        }
-
-        &:nth-child(9) {
-            top: 75%;
+            b {
+                color: $grey-9;
+                font-size: 35px;
+                font-weight: 500;
+            }
         }
     }
 
-    .slider-big {
-         height: 100%;
-        position: relative;
+    .nav-button {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        transition: all .6s ease;
+        border: 2px solid $grey-6;
+        border-radius: 50%;
+        background: $white;
 
-         ul {
-             width: 100%;
-             position: relative;
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 25%;
+            left: 20%;
+            width: 15px;
+            height: 3px;
+            border-top: 2px solid $grey-6;
+            border-bottom: 2px solid $grey-6;
+        }
 
-             li {
-                 width: 100%;
-                 height: 500px;
-                 position: relative;
-                 background-size: 100%;
-                 background-repeat: no-repeat;
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 65%;
+            left: 20%;
+            width: 15px;
+            height: 2px;
+            background: $grey-6;
+        }
 
-                 img {
-                     width: 100%;
-                     display: block;
-                     left: 0;
-                     top: 0;
-                 }
+        &:hover {
+            background: #e5e5e5;
+        }
+    }
 
-                 .text {
-                     position: absolute;
-                     top: 0;
-                     left: 0;
-                     text-align: center;
-                     width: 100%;
-                     padding: 30px;
-
-                     h3, p {
-                         color: $white;
-                     }
-
-                     h3 {
-                         font-size: 25px;
-                     }
-
-                     p {
-                         font-size: 20px;
-                     }
-                 }
-             }
-         }
-     }
-}
-
-.ok {
-    .slider-big {
-        height: 100%;
+    .top-nav {
+        & {
+            display: none;
+        }
 
         ul {
-            width: 100%;
-            position: relative;
+            text-align: center;
+            padding-bottom: 7px;
 
             li {
-                width: 100%;
-                height: 500px;
-                position: relative;
-                background-size: cover;
-                background-repeat: no-repeat;
+                display: inline-block;
+                margin-left: -3px;
 
-                img {
-                    width: 100%;
-                    display: block;
-                    left: 0;
-                    top: 0;
-                }
+                a {
+                    text-decoration: none;
+                    transition: all 0.4s ease;
+                    color: $grey-5_1;
+                    position: relative;
+                    z-index: 999;
+                    padding: 10px 20px 10px 20px;
 
-                .text {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    padding: 30px;
-
-                    h3, p {
-                        color: $white;
-                    }
-
-                    h3 {
-                        font-size: 25px;
-                    }
-
-                    p {
-                        font-size: 20px;
+                    &:hover {
+                        box-shadow: 3px 3px 15px $grey-6;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
                     }
                 }
             }
