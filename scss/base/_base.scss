@@ -2,8 +2,7 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: $white;
-
+    background-color: $grey-1_1;
     min-width: 320px;
 }
 
@@ -27,6 +26,7 @@ p, body, html {
     text-decoration: none;
     outline: none;
     font-family: $font-base;
+    z-index: 10;
 }
 
 .wr {
@@ -89,5 +89,47 @@ a {
         content: '';
         display: table;
         clear: both;
+    }
+}
+
+%title {
+    h2 {
+        text-align: center;
+        color: $grey-6_1;
+        font-weight: 400;
+    }
+
+    .hr {
+        width: 83%;
+        margin: 15px auto;
+        height: 2px;
+        background: $grey-3;
+        border-radius: 50%;
+    }
+}
+
+%wrGradient {
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(to right, $grey-1_1, #fff);
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(to left, $grey-1_1, #fff);
+        bottom: 0;
+        right: 0;
+        z-index: -1;
     }
 }

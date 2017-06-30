@@ -11,60 +11,97 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <div class="wr">
-            <a href="#" class="logo">
-                <b>Logo</b>Type
-            </a>
-            <a href="#" id="nav-button" class="nav-button"></a>
-            <nav class="top-nav">
-                <ul>
-                    <li><a href="#" class="active">Главная</a></li>
-                    <li><a href="#">Источники</a></li>
-                    <li><a href="#">Инструменты</a></li>
-                    <li><a href="#">Программы</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header>
+    <div class="wr">
+        <a href="#" class="logo" title="На главную">
+            <b>Logo</b>Type
+        </a>
+        <a href="#" id="nav-button" class="nav-button"></a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#" class="active">Главная</a></li>
+                <li><a href="#">Категории</a></li>
+                <li><a href="#">Уроки</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <main>
-        <div class="wr">
-            <section class="basics">
-                <h1>Как создать сайт ?</h1>
-                <p>Это мы и будем выяснять в дальнейших уроках!<br>
-                Предлогаю вашему вниманию список полезных сайтов, которые помогут не только начинающим, но и бывалым веб-программистам :</p>
-                <ul>
-                    <li><a href="#">HTMLBook</a></li>
-                    <li><a href="#">W3Schools</a></li>
-                    <li><a href="#">CSS-Tricks</a></li>
-                    <li><a href="#">CSS4-Selectors</a></li>
-                </ul>
-            </section>
-            <section class="tools">
-                <ul>
-                    <li><a href="#">Transfonter</a></li>
-                    <li><a href="#">Google Fonts</a></li>
-                </ul>
-            </section>
-            <section class="programms">
-                <ul>
-                    <li><a href="#">PHP Storm</a></li>
-                    <li><a href="#">ST3</a></li>
-                    <li><a href="#">Brackets</a></li>
-                    <li><a href="#">Smart Git</a></li>
-                    <li><a href="#">Ruby</a></li>
-                    <li><a href="#">Compass</a></li>
-                    <li><a href="#">SASS</a></li>
-                </ul>
-            </section>
-        </div>
-    </main>
+<main>
+    <div class="wr">
+        <section class="basics">
+            <div class="wr">
+                <div class="title">
+                    <h2>Сайты-библиотеки для Вас</h2>
+                    <div class="hr"></div>
+                </div>
 
-    <footer>
-    </footer>
+                <p>Предлогаю Вашему вниманию список сайтов, которые помогут не только
+                    начинающим, но и бывалым веб-программистам :</p>
+                <ul>
+                    <li><a href="http://htmlbook.ru/" target="_blank">HTMLBook</a> - на данном сайте есть самоучители по
+                        HTML5/CSS3, а так же справочники по ним, есть курсы о том, как сверстать сайт и многое другое
+                    </li>
+                    <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a> - здесь вы сможете найти
+                        много полезного во всех сферах веб-программирования, уроки/справочники по HTML, CSS, JavaScript
+                        (так же фреймворки), PHP
+                    </li>
+                    <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a> - на этом сайте вы сожете так
+                        же найти много интересного/полезного для себя
+                    </li>
+                    <li><a href="http://css4-selectors.com/" target="_blank">CSS4-Selectors</a> - здесь же вы найдёте
+                        все селекторы которые используются в CSS1-4, а так же совместимость их с браузерами
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="tools">
+            <div class="wr">
+                <div class="title">
+                    <h2>Сайты-помощники для вёрстки</h2>
+                    <div class="hr"></div>
+                </div>
 
-    <script src="js/jquery-1.12.4.min.js"></script>
-    <script src="js/js.js"></script>
+                <p>Сайты с которыми Вам будет необходимо "сотрудничать", для того, чтобы вы, к примеру, могли настроить правильно шрифты и т.д.:</p>
+                <ul>
+                    <li><a href="https://transfonter.org/">Transfonter</a> - один из генераторов шрифтов, с ним очень просто работать, даёт стабильный результат</li>
+                    <li><a href="https://fonts.google.com/">Google Fonts</a> - один из первых сайтов на который бегут все программисты, если конечно нет лучшей альтернативы, для того чтобы скачать/установить шрифты</li>
+                </ul>
+            </div>
+        </section>
+        <section class="programms">
+            <div class="wr">
+                <div class="title">
+                    <h2>Программы</h2>
+                    <div class="hr"></div>
+                </div>
+
+                <p>Программы которыми пользуюсь/пользовался я, они как по мне, одни из лучших, они относительно не большие и лёгкие в усвоении, а так же в них присутствует огромное количество функционала :</p>
+                <ul>
+                    <li><a href="https://www.jetbrains.com/phpstorm/download/#section=windows">PHP Storm</a> - среда разработки, в ней тонны функционала, подходит для больших проэктов</li>
+                    <li><a href="https://www.sublimetext.com/3">ST3</a> - редактор кода, который Вы влюбитесь с первого взгляда, он прост и так же имеет большое количество функционала, подходит для маленьких и больших проэктов</li>
+                    <li><a href="http://brackets.io/">Brackets</a> - так же отличный редактор кода, хорош для новичков, хороший помощник в написании кода, для маленьких и средних проэктов, в больших замечены значительные провисания</li>
+                    <li><a href="http://www.syntevo.com/smartgit/download">Smart Git</a> - программа которая обрежет Ваше время для работы с <a href="#">Git-ом</a></li>
+                    <li><a href="http://www.creative-seo.ru/blog/ustanovka-compass-na-windows/">Ruby</a> - динамический язык программирования с открытым исходным кодом с упором на простоту и продуктивность, но для нас он требуется для работы с <a href="#">SASS</a></li>
+                    <li><a href="http://www.creative-seo.ru/blog/ustanovka-compass-na-windows/">Compass</a> - компилятор SCSS файлов, он переводит синтаксис SCC в обычный CSS</li>
+                    <li><a href="http://www.creative-seo.ru/blog/ustanovka-compass-na-windows/">SASS</a> -  Sass (Syntactically Awesome StyleSheets), препроцессор, имеет улучшенный синтаксис CSS, код становится более читабельней и легче в написании</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <div class="wr">
+
+    </div>
+</footer>
+
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery.bxslider.js"></script>
+<script src="js/jquery.lightslider.js"></script>
+<script src="js/js.js"></script>
 </body>
 </html>
