@@ -95,6 +95,12 @@ header {
                         text-transform: uppercase;
                         letter-spacing: 2px;
                     }
+					
+					&.active {
+						text-transform: uppercase;
+						color: black;
+						border-bottom: 2px solid black;
+					}
                 }
             }
         }
@@ -104,6 +110,56 @@ header {
 main {
     > .wr {
         padding: 0;
+    }
+
+    .slider {
+        height: 500px;
+        background-color: #f2f2f2;
+        padding-top: 250px;
+        background-repeat:no-repeat;
+        background-size: cover;
+        @extend %wrGradient;
+
+        .text {
+            height: 50px;
+            font-size: 25px;
+            text-align: center;
+            margin-top: -25px;
+            color: #333;
+        }
+    }
+
+    .select-prog {
+        ul {
+            & {
+                text-align: center;
+                padding-top: 25px;
+            }
+
+            li {
+                display: inline-block;
+                list-style: none;
+                margin-left: 40px;
+                padding: 20px 0;
+                background-color: #fff;
+                border: 1px solid transparent;
+                box-sizing: border-box;
+
+                a {
+                    padding: 20px 40px;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                }
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:hover {
+                    border: 1px solid #e1d3c1;
+                }
+            }
+        }
     }
 
     .basics, .tools, .programms {
@@ -120,6 +176,10 @@ main {
         .title {
             @extend %title;
             margin-bottom: 15px;
+
+            h2 {
+                cursor: pointer;
+            }
         }
 
         p {
@@ -149,30 +209,21 @@ main {
             }
         }
     }
+}
 
-    //.tools {
-    //    .title {
-    //        @extend %title;
-    //        margin-bottom: 15px;
-    //    }
-    //
-    //    ul {
-    //        li {
-    //
-    //        }
-    //    }
-    //}
-    //
-    //.programms {
-    //    .title {
-    //        @extend %title;
-    //        margin-bottom: 15px;
-    //    }
-    //
-    //    ul {
-    //        li {
-    //
-    //        }
-    //    }
-    //}
+footer {
+	.social {
+		float: right;
+		
+		ul {
+			li {
+				display: inline-block;
+				margin-left: 10px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+			}
+		}
+	}
 }
