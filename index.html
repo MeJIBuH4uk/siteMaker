@@ -7,7 +7,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+	
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -20,7 +20,6 @@
         <nav class="main-nav">
             <ul>
                 <li><a href="#" class="active">Главная</a></li>
-                <li><a href="#">Категории</a></li>
                 <li><a href="#">Уроки</a></li>
                 <li><a href="#">О нас</a></li>
                 <li><a href="#">Контакты</a></li>
@@ -31,18 +30,35 @@
 
 <main>
     <div class="wr">
-        <div class="slider" style="background-image: url('img/Eshhe-raz-pro-lyubov-500h500.jpg')">
-            <div class="text">
-                Слайдер!
-            </div>
-        </div>
 
         <div class="select-prog">
-            <ul>
-                <li><a href="#basics">Сайты-библиотеки</a></li>
-                <li><a href="#tools">Сайты-помощники</a></li>
-                <li><a href="#programms">Программы</a></li>
-            </ul>
+			<div class="wr">
+				<ul>
+					<li><a href="#basics">Сайты-библиотеки</a></li>
+					<li><a href="#tools">Сайты-помощники</a></li>
+					<li><a href="#programms">Программы</a></li>
+				</ul>
+			</div>
+        </div>
+        
+        <div class="slider">
+           <ul class="sliderBig">
+           	<li class="item current">
+           		<div class="wr">
+           			<img src="img/01.jpg" alt="">
+           		</div>
+           	</li>
+           	<li class="item">
+           		<div class="wr">
+           			<img src="img/02.jpg" alt="">
+           		</div>
+           	</li>
+           	<li class="item">
+           		<div class="wr">
+           			<img src="img/03.jpg" alt="">
+           		</div>
+           	</li>
+           </ul>
         </div>
 
         <section id="basics" class="basics">
@@ -55,18 +71,41 @@
                 <p>Предлогаю Вашему вниманию список сайтов, которые помогут не только
                     начинающим, но и бывалым веб-программистам :</p>
                 <ul>
-                    <li><a href="http://htmlbook.ru/" target="_blank">HTMLBook</a> - на данном сайте есть самоучители по
-                        HTML5/CSS3, а так же справочники по ним, есть курсы о том, как сверстать сайт и многое другое
+                    <li><a href="http://htmlbook.ru/" target="_blank" class="li1"><img src="img/htmlbook.png" alt=""></a>
+<!--
+                       <p class="p1"> - на данном сайте есть самоучители по
+                        HTML5/CSS3, а так же справочники по ним, есть курсы о том, как сверстать сайт и многое другое</p>
+-->
                     </li>
-                    <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a> - здесь вы сможете найти
+                    <li>
+                      <a href="https://www.w3schools.com/" target="_blank" class="li2">
+                      	<img src="img/w3school.jpg" alt="">
+                      </a>
+<!--
+                      <p class="p2"> - здесь вы сможете найти
                         много полезного во всех сферах веб-программирования, уроки/справочники по HTML, CSS, JavaScript
                         (так же фреймворки), PHP
+                      </p>
+-->
                     </li>
-                    <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a> - на этом сайте вы сожете так
+                    <li>
+                       <a href="https://css-tricks.com/" target="_blank" class="li3">
+						<img src="img/cssTricks.png" alt="">
+					   </a>
+<!--
+                       <p class="p3"> - на этом сайте вы сожете так
                         же найти много интересного/полезного для себя
+                        </p>
+-->
                     </li>
-                    <li><a href="http://css4-selectors.com/" target="_blank">CSS4-Selectors</a> - здесь же вы найдёте
+                    <li><a href="http://css4-selectors.com/" target="_blank" class="li4">
+						<img src="img/css4-selectors.png" alt="">
+                       </a>
+<!--
+                       <p class="p4"> - здесь же вы найдёте
                         все селекторы которые используются в CSS1-4, а так же совместимость их с браузерами
+                        </p>
+-->
                     </li>
                 </ul>
             </div>
@@ -80,8 +119,10 @@
 
                 <p>Сайты с которыми Вам будет необходимо "сотрудничать", для того, чтобы вы, к примеру, могли настроить правильно шрифты и т.д.:</p>
                 <ul>
-                    <li><a href="https://transfonter.org/">Transfonter</a> - один из генераторов шрифтов, с ним очень просто работать, даёт стабильный результат</li>
-                    <li><a href="https://fonts.google.com/">Google Fonts</a> - один из первых сайтов на который бегут все программисты, если конечно нет лучшей альтернативы, для того чтобы скачать/установить шрифты</li>
+                    <li><a href="https://transfonter.org/" target="_blank">Transfonter</a> - один из генераторов шрифтов, с ним очень просто работать, даёт стабильный результат</li>
+                    <li><a href="https://fonts.google.com/" target="_blank">Google Fonts</a> - один из первых сайтов на который бегут все программисты, если конечно нет лучшей альтернативы, для того чтобы скачать/установить шрифты</li>
+                    <li><a href="https://typekit.com/" target="_blank">Typekit</a> - так же сайт где можно достать шрифты, помощь </li>
+                    <li><a href="https://typecast.com/" target="_blank">Typecast</a> - один из первых сайтов на который бегут все программисты, если конечно нет лучшей альтернативы, для того чтобы скачать/установить шрифты</li>
                 </ul>
             </div>
         </section>
@@ -111,11 +152,10 @@
     <div class="wr">
     	<div class="social">
     		<ul>
-    			<li><a href="#">VK</a></li>
-    			<li><a href="#">FB</a></li>
-    			<li><a href="#">OD</a></li>
-    			<li><a href="#">TV</a></li>
-    			<li><a href="#">IN</a></li>
+    			<li><a href="#" style="background-image: url('img/soc.png');"></a></li>
+    			<li><a href="#" class="vk" style="background-image: url('img/soc.png');"></a></li>
+    			<li><a href="#" class="fb" style="background-image: url('img/soc.png');"></a></li>
+    			<li><a href="#" class="od" style="background-image: url('img/soc.png');"></a></li>
     		</ul>
     	</div>
 		&copy; Все права защищены

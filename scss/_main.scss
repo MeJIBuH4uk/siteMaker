@@ -67,6 +67,12 @@ header {
         &:hover {
             background: #e5e5e5;
         }
+				
+		@include bp(max-width, $bp-medium) {
+			& {
+				right: 50px;
+			}
+		}
     }
 
     .main-nav {
@@ -91,7 +97,7 @@ header {
                     padding: 10px 20px 10px 20px;
 
                     &:hover {
-                        box-shadow: 3px 3px 15px $grey-6;
+                        box-shadow: 3px 3px 15px #6a957d;
                         text-transform: uppercase;
                         letter-spacing: 2px;
                     }
@@ -113,42 +119,69 @@ main {
     }
 
     .slider {
-        height: 500px;
-        background-color: #f2f2f2;
-        padding-top: 250px;
-        background-repeat:no-repeat;
-        background-size: cover;
-        @extend %wrGradient;
+		& {
+			height: 500px;
+			background-color: #f2f2f2;
+			overflow: hidden;
+			@extend %clear;
+			@extend %wrGradient;
+		}
+		
+		.wr {
+			padding: 0;
+		}
+		
+		ul {
+			& {
+				position: relative;
+				height: 100%;
+			}
+			
+			li {
+				height: 500px;
+				background-repeat:no-repeat;
+				background-size: cover;
+				
+				img {
+					width: 100%;
+				}
+			}
+		}
 
         .text {
             height: 50px;
             font-size: 25px;
             text-align: center;
-            margin-top: -25px;
             color: #333;
         }
+		
+		
     }
 
     .select-prog {
         ul {
             & {
                 text-align: center;
-                padding-top: 25px;
+    			padding: 25px 0;
             }
 
             li {
-                display: inline-block;
-                list-style: none;
-                margin-left: 40px;
-                padding: 20px 0;
-                background-color: #fff;
-                border: 1px solid transparent;
-                box-sizing: border-box;
+    			transition: all.6s ease;
+				display: inline-block;
+				list-style: none;
+				margin-left: 40px;
+				padding: 20px 0;
+				overflow: hidden;
+				background-color: #fff;
+				border: 1px solid transparent;
+				border-radius: 50px;
+				box-sizing: border-box;
+				box-shadow: 3px 4px 5px #68937b;
 
                 a {
-                    padding: 20px 40px;
-                    text-transform: uppercase;
-                    text-decoration: none;
+					padding: 20px 40px;
+					text-transform: uppercase;
+					text-decoration: none;
                 }
 
                 &:first-child {
@@ -156,8 +189,31 @@ main {
                 }
 
                 &:hover {
-                    border: 1px solid #e1d3c1;
+                    border: 1px solid seagreen;
+					box-shadow: inset 3px 4px 5px #68937b;
                 }
+				
+				@include bp(max-width, $bp-medium_2) {
+					& {
+						margin: 15px auto 30px auto;
+						display: block;
+						width: 50%;
+						
+						&:nth-child(3) {
+							margin: 0 auto 0 auto;
+						}
+						
+						&:nth-child(1) {
+							margin: 15px auto 30px auto;
+						}
+					}
+				}
+				
+				@include bp(max-width, $bp-small) {
+					& {
+						width: 100%;
+					}
+				}
             }
         }
     }
@@ -179,6 +235,19 @@ main {
 
             h2 {
                 cursor: pointer;
+    			transition: all.3s ease;
+				width: 50%;
+				padding: 15px 0;
+				box-shadow: inset 1px 3px 10px #6a957d;
+				margin: 0 auto;
+				
+				&:hover {
+					box-shadow: inset 2px 5px 15px #6a957d;
+				}
+				
+				@include bp(max-width, $bp-medium) {
+					width: 100%;
+				}
             }
         }
 
@@ -196,7 +265,7 @@ main {
             li {
                 & {
                     margin-bottom: 15px;
-                    list-style: circle;
+                    list-style: none;
                     color: $grey-7;
 
                     a {
@@ -205,20 +274,72 @@ main {
                             text-decoration: none;
                         }
                     }
+					
+					p {
+						display: inline;
+					}
                 }
             }
         }
     }
+	
+	.basics {
+		
+	}
 }
 
 footer {
+	& {
+        @extend %clear;
+	}
+	
+	.wr {
+        @extend %wrGradient;
+    	padding: 20px 35px;
+		
+		&:before {
+			background: linear-gradient(to right, #696969, #dbdbdb);
+		}
+
+		&:after {
+			background: linear-gradient(to left, #696969, #dbdbdb);
+		}
+	}
+	
 	.social {
 		float: right;
 		
 		ul {
+			& {
+				margin-top: -7px;
+			}
+			
 			li {
-				display: inline-block;
-				margin-left: 10px;
+				& {
+					display: inline-block;
+					margin-left: 10px;
+				}
+				
+				a {
+					& {
+						background-position: -33px 0;
+						width: 32px;
+						display: block;
+						height: 31px;
+					}
+					
+					&.vk {
+    					background-position: -69px 0;
+					}
+					
+					&.fb {
+    					background-position: -104px 0;
+					}
+					
+					&.od {
+    					background-position: -173px 0;
+					}
+				}
 
                 &:first-child {
                     margin-left: 0;
