@@ -221,16 +221,16 @@ main {
     }
 
     .basics, .tools, .programms {
-        margin-bottom: 10px;
-        @extend %clear;
+        & {
+            margin-bottom: 10px;
+            @extend %clear;
+        }
 
         > .wr {
             padding: 20px;
             @extend %wrGradient;
         }
-    }
 
-    .basics, .tools, .programms {
         .title {
             @extend %title;
             margin-bottom: 15px;
@@ -279,15 +279,15 @@ main {
     }
 	
 	.basics {
-		@extend %basicSaction;
+		@extend %basicSection;
 	}
 	
 	.tools {
-		@extend %basicSaction;
+		@extend %basicSection;
 	}
 	
 	.programms {
-		@extend %basicSaction;
+		@extend %basicSection;
 	}
 }
 
