@@ -217,12 +217,41 @@ main {
             color: #333;
         }
 		
-		
+		@include bp(max-width, $bp-large-2) {
+            & {
+                height: 450px;
+
+                .bx-viewport {
+                    height: 400px !important;
+                }
+            }
+        }
+
+		@include bp(max-width, $bp-medium) {
+            & {
+                height: 400px;
+
+                .bx-viewport {
+                    height: 350px !important;
+                }
+            }
+        }
+
+		@include bp(max-width, $bp-small-2) {
+            & {
+                height: 350px;
+
+                .bx-viewport {
+                    height: 300px !important;
+                }
+            }
+        }
     }
 
     .basics, .tools, .programms {
         & {
             margin-bottom: 10px;
+            @extend %basicSection;
             @extend %clear;
         }
 
@@ -277,18 +306,6 @@ main {
             }
         }
     }
-
-	.basics {
-		@extend %basicSection;
-	}
-
-	.tools {
-		@extend %basicSection;
-	}
-	
-	.programms {
-		@extend %basicSection;
-	}
 }
 
 footer {
